@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="off">
+    <!-- パッケージごとにAppenderとログレベルを組み合わせる -->
+    <Loggers>
+        <Logger name="net.newbiz.ebil.webapp" level="WARN">
+            <AppenderRef ref="console-appender"/>
+            <AppenderRef ref="file-appender" />
+        </Logger>
+
+        <Root level="WARN">
+            <AppenderRef ref="console-appender"/>
+        </Root>
+    </Loggers>
+</Configuration>

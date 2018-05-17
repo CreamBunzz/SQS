@@ -1,0 +1,11 @@
+Resources:
+  ewsQueue:
+    Type: "AWS::SQS::Queue"
+    Properties:
+      DelaySeconds: 0
+      MaximumMessageSize: 262144
+      MessageRetentionPeriod: 604800
+      QueueName: lspan-aws-test
+      ReceiveMessageWaitTimeSeconds: 0
+      #RedrivePolicy:
+      VisibilityTimeout: 60

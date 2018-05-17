@@ -1,0 +1,25 @@
+Resources:
+  ewsTable:
+    Type: "AWS::DynamoDB::Table"
+    Properties:
+      AttributeDefinitions:
+        -
+          AttributeName: "Account"
+          AttributeType: "S"
+        -
+          AttributeName: "UUID"
+          AttributeType: "S"
+      KeySchema:
+        -
+          AttributeName: "Account"
+          KeyType: "HASH"
+        -
+          AttributeName: "UUID"
+          KeyType: "RANGE"
+      ProvisionedThroughput:
+        ReadCapacityUnits: 1
+        WriteCapacityUnits: 1
+      TableName: "dynamooo"
+      TimeToLiveSpecification:
+        AttributeName: "ttl"
+        Enabled: "true"
